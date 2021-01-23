@@ -1,0 +1,98 @@
+body{
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+p{
+    color: white;
+    text-align: center;
+}
+
+.mensajes{
+    display: inline-block;
+    width: 86%;
+    height: 30px;
+}
+
+#arranque{
+    display: inline-block;
+}
+
+.velocimetro{
+    display: inline-block;
+    width: 87.5%;
+    height: 65px;
+    margin-top: 10px;
+}
+
+#frenos{
+    display: inline-block;
+}
+
+.flechas{
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+img{
+    height: 50px;
+    width: 100px;
+    opacity: 0;
+}
+
+button{
+    color: black;
+    background-color: rgb(220, 220, 220);
+    border-radius: 30px;
+}
+
+#fondo{
+    background-image: url("../img/Carro_negro.jpeg");
+    background-size: cover;
+    z-index: 10;
+}
+
+#restante{
+    user-select: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 610px;
+    display: block;
+    color: white;
+    font-size: 100px;
+    z-index: 100;
+}
+
+.stop{
+    display: block;
+    position: fixed;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vh;
+    height: 50vh;
+    opacity: 1;
+    z-index: 100;
+}
+
+#stop{
+    text-align: center;
+    background-color: blue;
+    margin-left: 37.5%;
+    margin-top: -12.3%;
+}
+
+[data-class=after]::after {
+    content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+[data-class=after]::before {
+    background-image: url("../img/Carro_negro.jpeg");
+    background-size: cover;
+}
