@@ -52,6 +52,7 @@ class Carro {
         this.veces_frenado = 0;
         this.tiempo = tiempo;
         this.vel_promedio = 0;
+        this.vel_maxima = 0;
         this.distancia_ms = 3000;
         this.distancia_pausa = 0;
         this.recorrer;
@@ -370,7 +371,7 @@ class Carro {
         let mensajes = document.getElementById("mensajes");
         let veces_frenado = this.veces_frenado;
         console.log("Veces frenado: " + veces_frenado)
-        let n = ((tiempo + ((veces_frenado * 10) + 10)) / 60);
+        let n = ((tiempo + (veces_frenado * this.tiempo_paradas)) / 60);
 
         tiempo = round(n, 2);
         vel_promedio = round(vel_promedio, 2)
