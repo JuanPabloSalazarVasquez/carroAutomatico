@@ -39,7 +39,6 @@ function frenar() {
 }
 
 let recorrer; //Función que cuenta mediante un interval las funcionas básicas del recorrido
-let distancia_pausa = 0; //Distancia al momento de pausar
 let cant_promedio = 0; //Veces que se cambió de velocidad
 
 class Carro {
@@ -251,12 +250,11 @@ class Carro {
     //Giros y direccionales
 
     cambios(x) {
-
         //variables
         const p_velocidad = document.getElementById("velocidad");
         const p_cambio = document.getElementById("cambio");
         let i = 0;
-        let recorrido = distancia_pausa;
+        let recorrido = 0;
         let distancia_ms = this.distancia_ms;
         let cambio = this.cambio;
         let vel_maxima = this.vel_maxima;
@@ -287,12 +285,11 @@ class Carro {
             }
 
             i++;
-            cant_promedio++
             tiempo += 1;
 
             if (recorrido >= distancia_ms) {
                 clearInterval(recorrer);
-                this.vel_promedio = recorrido / cant_promedio;
+                this.vel_promedio = recorrido / i;
                 this.vel_maxima = vel_maxima;
                 this.tiempo = tiempo;
                 Nisan.finalizar(i);
